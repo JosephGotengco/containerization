@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+    description: This API processes statistics about facts and users
+    version: 1.0.0
+    title: Interesting Facts API
+    contact:
+        email: jgotengco3@my.bcit.ca
+tags:
+    - name: facts
+      description: Operations relating to facts
+    - name: subscriber
+      description: Operations relating to subscribers
+paths:
+    /stats:
+        get:
+            summary: Gets the event stats
+            operationId: app.get_stats
+            description: Gets User and Fact processed statistics
+            responses:
+                '200':
+                    description: Successfully return User and Fact statistics
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                items:
+                                    $ref: '#/components/schemas/InterestingFactsStats'
+                '400':
+                    description: Invalid request
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+components:
+    schemas:
+        InterestingFactsStats:
+            type: object
+            required:
+            - num_users
+            - num_facts
+            - most_popular_tag
+            - avg_jokes_added_weekly
+            - num_subscribed_users
+            properties:
+                num_users:
+                    type: integer
+                    example: 500
+                num_facts:
+                    type: integer
+                    example: 500
+                most_popular_tag:
+                    type: string
+                    example: canada
+                avg_jokes_added_weekly:
+                    type: integer
+                    example: 10
+                jokes_added_current_month:
+                    type: integer
+                    example: 200
+                num_subscribed_users:
+                    type: integer
+                    example: 500
+# Added by API Auto Mocking Plugin
+servers:
+    - description: SwaggerHub API Auto Mocking
+      url: https://virtserver.swaggerhub.com/josephgotengco1/InterestingFacts/1.0.0

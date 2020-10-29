@@ -1,0 +1,143 @@
+openapi: 3.0.0
+info:
+    description: This API provides audit info
+    version: 1.0.0
+    title: Audit API
+    contact:
+        email: jgotengco3@my.bcit.ca
+paths:
+    /facts:
+        get:
+            summary: gets a fact from history
+            operationId: app.get_fact
+            description: Gets fact from the even store
+            parameters:
+                - name: index
+                  in: query
+                  description: Gets the fact at the index in the even store
+                  schema:
+                      type: integer
+                      example: 100
+            responses:
+                "200":
+                    description: Successfully returned a fact event
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                items:
+                                    $ref: "#/components/schemas/InterestingFact"
+                "400":
+                    description: "Invalid request"
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+                "404":
+                    description: "Not Found"
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+    /users:
+        get:
+            summary: gets a user from history
+            operationId: app.get_user
+            description: Gets user from the event store
+            parameters:
+                - name: index
+                  in: query
+                  description: Gets the user at the index in the event store
+                  schema:
+                      type: integer
+                      example: 100
+            responses:
+                "200":
+                    description: Successfully returned a user event
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                items:
+                                    $ref: "#/components/schemas/User"
+                "400":
+                    description: "Invalid request"
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+                "404":
+                    description: "Not Found"
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    message:
+                                        type: string
+components:
+    schemas:
+        InterestingFact:
+            type: object
+            required:
+                - fact_id
+                - fact
+                - user_id
+                - tags
+                - timestamp
+            properties:
+                fact_id:
+                    type: string
+                    format: uuid
+                    example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
+                fact:
+                    type: string
+                    example: "Keanu Reeves is a Canadian citizen, and considers himself to be Canadian."
+                user_id:
+                    type: string
+                    format: uuid
+                    example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
+                tags:
+                    type: array
+                    items:
+                        type: string
+                    example: ["keanu reeves", "celebrity", "canada"]
+                timestamp:
+                    type: string
+                    format: date-time
+                    example: 2016-08-29T09:12:33.001Z
+        User:
+            type: object
+            required:
+                - user_id
+                - username
+                - timestamp
+                - subscribed
+            properties:
+                user_id:
+                    type: string
+                    format: uuid
+                    example: "a290f1ee-7c54-4b01-90e6-d701748f0851"
+                username:
+                    type: string
+                    example: "joseph"
+                timestamp:
+                    type: string
+                    format: date-time
+                    example: 2016-08-29T09:12:33.001Z
+                subscribed:
+                    type: boolean
+                    example: true
+# Added by API Auto Mocking Plugin
+servers:
+    - description: SwaggerHub API Auto Mocking
+      url: https://virtserver.swaggerhub.com/josephgotengco1/InterestingFacts/1.0.0

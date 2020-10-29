@@ -1,0 +1,110 @@
+openapi: 3.0.0
+info:
+    description: This API receives and sends interesting facts to subscribers
+    version: 1.0.0
+    title: Interesting Facts API
+    contact:
+        email: jgotengco3@my.bcit.ca
+tags:
+    - name: facts
+      description: Operations relating to facts
+    - name: subscriber
+      description: Operations relating to subscribers
+paths:
+    /facts/category:
+        post:
+            tags:
+                - facts
+            summary: adds a user-entered fact to a fact category list
+            operationId: app.add_fact
+            description: Adds a fact to its respective category in the system
+            responses:
+                "200":
+                    description: fact added
+                "400":
+                    description: "invalid input, object invalid"
+                "409":
+                    description: "fact already added"
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/InterestingFact"
+                description: Fact to add
+    /facts/subscribe:
+        post:
+            tags:
+                - subscriber
+            summary: subscribes a user to a daily fact subscriber list
+            operationId: app.subscribe_user
+            description: Adds a user to a list so they can be sent an interesting fact daily
+            responses:
+                "200":
+                    description: "user added to subscriber list"
+                "400":
+                    description: "invalid input, object invalid"
+                "409":
+                    description: "user already added to list"
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/User"
+                description: User to add
+components:
+    schemas:
+        InterestingFact:
+            type: object
+            required:
+                - fact_id
+                - fact
+                - user_id
+                - tags
+                - timestamp
+            properties:
+                fact_id:
+                    type: string
+                    format: uuid
+                    example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
+                fact:
+                    type: string
+                    example: "Keanu Reeves is a Canadian citizen, and considers himself to be Canadian."
+                user_id:
+                    type: string
+                    format: uuid
+                    example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
+                tags:
+                    type: array
+                    items:
+                        type: string
+                    example: ["keanu reeves", "celebrity", "canada"]
+                timestamp:
+                    type: string
+                    format: date-time
+                    example: 2016-08-29T09:12:33.001Z
+        User:
+            type: object
+            required:
+                - user_id
+                - username
+                - timestamp
+                - subscribed
+            properties:
+                user_id:
+                    type: string
+                    format: uuid
+                    example: "a290f1ee-7c54-4b01-90e6-d701748f0851"
+                username:
+                    type: string
+                    example: "joseph"
+                timestamp:
+                    type: string
+                    format: date-time
+                    example: 2016-08-29T09:12:33.001Z
+                subscribed:
+                    type: boolean
+                    example: true
+# Added by API Auto Mocking Plugin
+servers:
+    - description: SwaggerHub API Auto Mocking
+      url: https://virtserver.swaggerhub.com/josephgotengco1/InterestingFacts/1.0.0

@@ -1,0 +1,184 @@
+2020-10-22 22:03:34,962 - basicLogger - INFO - Retrieving fact at index 5
+2020-10-22 22:03:35,022 - basicLogger - ERROR - Could not find fact at index 5
+2020-10-22 22:03:38,012 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:03:38,066 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:03:53,304 - basicLogger - INFO - Retrieving fact at index 4
+2020-10-22 22:03:53,363 - basicLogger - ERROR - Could not find fact at index 4
+2020-10-22 22:03:55,203 - basicLogger - INFO - Retrieving fact at index 4
+2020-10-22 22:03:55,255 - basicLogger - ERROR - Could not find fact at index 4
+2020-10-22 22:04:12,863 - basicLogger - INFO - Retrieving fact at index 4
+2020-10-22 22:04:12,926 - basicLogger - ERROR - Could not find fact at index 4
+2020-10-22 22:04:14,512 - basicLogger - INFO - Retrieving fact at index 4
+2020-10-22 22:04:14,566 - basicLogger - ERROR - Could not find fact at index 4
+2020-10-22 22:04:18,894 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:04:18,961 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:04:50,289 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:04:50,397 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:05:13,832 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:05:13,946 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:05:18,156 - basicLogger - INFO - Retrieving fact at index 6
+2020-10-22 22:05:18,257 - basicLogger - ERROR - Could not find fact at index 6
+2020-10-22 22:05:19,783 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:05:19,884 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:05:48,891 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:05:48,993 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:06:22,970 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:06:23,073 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:06:48,612 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:06:48,727 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:06:51,310 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:06:51,411 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:10:15,756 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:10:15,887 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:12:31,428 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:15:07,865 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:15:07,966 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:16:26,379 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:16:26,481 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:16:28,316 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:16:28,418 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:16:48,564 - basicLogger - INFO - Retrieving fact at index 772
+2020-10-22 22:16:48,666 - basicLogger - ERROR - Could not find fact at index 772
+2020-10-22 22:16:51,835 - basicLogger - INFO - Retrieving fact at index 772
+2020-10-22 22:16:51,936 - basicLogger - ERROR - Could not find fact at index 772
+2020-10-22 22:16:57,339 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:16:57,448 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:17:00,638 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:17:00,746 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:17:18,583 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:17:18,684 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:19:24,443 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:19:24,544 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:19:26,973 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:19:27,075 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:19:36,854 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:19:36,971 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:20:51,989 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:20:52,098 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:22:01,169 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:22:01,285 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:22:09,476 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:22:09,577 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:22:44,226 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:22:44,327 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:22:45,718 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:22:45,827 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:24:02,986 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:24:03,098 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:24:05,455 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:24:05,563 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:24:26,128 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:24:26,236 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:24:49,307 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:24:49,409 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:25:31,105 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:25:31,207 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:26:14,931 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:26:15,034 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:26:18,171 - basicLogger - INFO - Retrieving fact at index -4
+2020-10-22 22:26:18,286 - basicLogger - ERROR - Could not find fact at index -4
+2020-10-22 22:26:21,866 - basicLogger - INFO - Retrieving fact at index 20
+2020-10-22 22:26:21,969 - basicLogger - ERROR - Could not find fact at index 20
+2020-10-22 22:26:26,025 - basicLogger - INFO - Retrieving fact at index 10000
+2020-10-22 22:26:26,128 - basicLogger - ERROR - Could not find fact at index 10000
+2020-10-22 22:26:29,287 - basicLogger - INFO - Retrieving fact at index 1023123123
+2020-10-22 22:26:29,397 - basicLogger - ERROR - Could not find fact at index 1023123123
+2020-10-22 22:29:34,805 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:29:34,914 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:29:37,692 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:29:37,802 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:30:32,095 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:30:32,257 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:30:33,770 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:30:37,336 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:30:37,492 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:30:39,575 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:33:07,706 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:33:11,315 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:33:11,583 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:33:13,131 - basicLogger - INFO - Retrieving fact at index 2
+2020-10-22 22:33:13,289 - basicLogger - ERROR - Could not find fact at index 2
+2020-10-22 22:33:14,817 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:33:14,993 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:33:55,610 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:33:55,741 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:33:58,112 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:33:58,350 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:33:59,525 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:33:59,708 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:00,648 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:00,838 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:01,996 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:02,211 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:03,450 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:03,630 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:04,502 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:04,708 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:06,571 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:34:09,784 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:09,913 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:12,797 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:12,961 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:24,821 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:25,024 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:26,327 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:26,589 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:27,902 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:28,165 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:42,974 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:43,167 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:44,671 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:44,928 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:46,225 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:46,509 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:48,824 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:34:54,927 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:55,277 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:56,547 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:56,804 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:34:58,486 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:34:58,714 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:36:21,621 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:36:21,731 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:36:23,181 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:36:23,288 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:36:25,793 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:36:25,902 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:40:06,890 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:40:06,998 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:40:38,254 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:40:38,357 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:42:53,340 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:42:53,449 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:43:46,654 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:44:44,773 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:44:44,874 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:44:51,365 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:44:51,467 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:45:02,478 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:45:12,448 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:45:12,563 - basicLogger - ERROR - Could not find fact at index 0
+2020-10-22 22:45:30,373 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:45:47,671 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-22 22:45:50,200 - basicLogger - INFO - Retrieving fact at index 5
+2020-10-22 22:46:06,092 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:46:06,199 - basicLogger - ERROR - Could not find fact at index 1
+2020-10-22 22:46:24,029 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-22 22:46:27,924 - basicLogger - INFO - Retrieving fact at index 400
+2020-10-28 14:46:38,679 - basicLogger - INFO - Retrieving fact at index 400
+2020-10-28 14:46:39,206 - basicLogger - ERROR - Could not find fact at index 400
+2020-10-28 14:59:36,413 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-28 15:00:13,276 - basicLogger - INFO - Retrieving fact at index 4
+2020-10-28 15:00:18,524 - basicLogger - INFO - Retrieving fact at index 400
+2020-10-28 15:00:22,284 - basicLogger - INFO - Retrieving fact at index 9999
+2020-10-28 15:00:23,001 - basicLogger - ERROR - Could not find fact at index 9999
+2020-10-28 15:00:29,091 - basicLogger - INFO - Retrieving fact at index 1
+2020-10-28 15:08:14,533 - basicLogger - INFO - Retrieving fact at index 0
+2020-10-28 15:08:19,397 - basicLogger - INFO - Retrieving fact at index 400
+2020-10-28 15:08:23,660 - basicLogger - INFO - Retrieving fact at index 99999
+2020-10-28 15:08:24,418 - basicLogger - ERROR - Could not find fact at index 99999
+2020-10-28 15:08:30,833 - basicLogger - INFO - Retrieving fact at index 500
+2020-10-28 15:08:55,261 - basicLogger - INFO - Retrieving fact at index 500
+2020-10-28 15:09:00,564 - basicLogger - INFO - Retrieving fact at index 9999
+2020-10-28 15:09:01,312 - basicLogger - ERROR - Could not find fact at index 9999
+2020-10-28 15:09:05,273 - basicLogger - INFO - Retrieving fact at index 1000

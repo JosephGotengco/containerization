@@ -1,0 +1,16 @@
+Interesting Facts API
+
+This is an application for a random facts service that allows curious and entertainment-seeking to view and subscribe for interesting facts.
+
+The events are fact adding requests and facts subscription requests:
+
+- The fact addition requests events are expected to be very high in the afternoon from Friday to Sunday as this is the time when people have the most free time.
+- The subscription requests are expected to be high on Mondays when people are feeling the most bored and want excitement or entertainment.
+
+The requests are stored to allow the following:
+
+- analysis of how many users subscribe per day
+- analysis of whether or not the user liked the interesting fact
+- aggregation of data across users to find which categories are most popular
+
+Users of the system are fact-enthusiasts and service admins

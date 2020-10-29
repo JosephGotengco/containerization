@@ -1,0 +1,9 @@
+version: 1
+add_fact:
+    url: "http://localhost:8090/facts/category"
+subscribe_user:
+    url: "http://localhost:8090/facts/subscribe"
+events:
+    hostname: "kafka-service-based.westus2.cloudapp.azure.com"
+    port: 9092
+    topic: events
