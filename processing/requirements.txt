@@ -1,3 +1,6 @@
 connexion==2.7.0
 swagger-ui-bundle==0.0.8
 APScheduler==3.6.3
+SQLAlchemy==1.3.20
+mysql-connector==2.2.9
+PyMySQL==0.10.1
