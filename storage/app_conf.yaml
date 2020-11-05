@@ -1,7 +1,7 @@
 version: 1
 datastore:
     user: root
-    password: "PASSWORD HERE"
+    password: "password"
     hostname: "kafka-service-based.westus2.cloudapp.azure.com"
     port: 3306
     db: events
