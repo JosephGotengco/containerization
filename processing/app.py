@@ -13,6 +13,7 @@ from os import path
 import requests
 import operator
 import json
+from flask_cors import CORS, cross_origin
 
 # load config
 with open('app_conf.yaml', 'r') as f:
@@ -204,6 +205,8 @@ def get_stats():
 
 
 app = connexion.FlaskApp(__name__, specification_dir='')
+CORS(app.app)
+app.app.config['CORS_HEADERS'] = 'Content-Type'
 app.add_api("openapi.yaml", strict_validation=True,
             validate_responses=True, base_path='/',)
 
