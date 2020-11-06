@@ -144,28 +144,28 @@ def populate_stats():
         if user["subscribed"]:
             new_num_subscribed_users = new_num_subscribed_users + 1
 
-    # with open(filename, "w") as f:
-    #     f.write(json.dumps({
-    #             "num_users": new_num_users,
-    #             "num_facts": new_num_facts,
-    #             "most_popular_tag": new_most_popular_tag,
-    #             "avg_jokes_added_weekly": new_avg_jokes_added_weekly,
-    #             "num_subscribed_users": new_num_subscribed_users,
-    #             "last_datetime": current_datetime
-    #             }, indent=4))
-    #     f.close()
-
-    # CODE SNIPPET FOR ADDING
     with open(filename, "w") as f:
         f.write(json.dumps({
-                "num_users": curr_num_users + new_num_users,
-                "num_facts": curr_num_facts + new_num_facts,
+                "num_users": new_num_users,
+                "num_facts": new_num_facts,
                 "most_popular_tag": new_most_popular_tag,
-                "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
-                "num_subscribed_users": curr_num_subscribed_users + new_num_subscribed_users,
+                "avg_jokes_added_weekly": new_avg_jokes_added_weekly,
+                "num_subscribed_users": new_num_subscribed_users,
                 "last_datetime": current_datetime
                 }, indent=4))
         f.close()
+
+    # CODE SNIPPET FOR ADDING
+    # with open(filename, "w") as f:
+    #     f.write(json.dumps({
+    #             "num_users": curr_num_users + new_num_users,
+    #             "num_facts": curr_num_facts + new_num_facts,
+    #             "most_popular_tag": new_most_popular_tag,
+    #             "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
+    #             "num_subscribed_users": curr_num_subscribed_users + new_num_subscribed_users,
+    #             "last_datetime": current_datetime
+    #             }, indent=4))
+    #     f.close()
 
     # log processing end
     logger.info("Finished Periodic Processing")
