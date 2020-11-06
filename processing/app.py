@@ -154,7 +154,7 @@ def populate_stats():
                 "last_datetime": current_datetime
                 }, indent=4))
         f.close()
-    
+
     # CODE SNIPPET FOR ADDING
     # with open(filename, "w") as f:
     #     f.write(json.dumps({
@@ -205,7 +205,8 @@ def get_stats():
 
 
 app = connexion.FlaskApp(__name__, specification_dir='')
-CORS(app.app)
+CORS(app)
+print(app.app)
 app.app.config['CORS_HEADERS'] = 'Content-Type'
 app.add_api("openapi.yaml", strict_validation=True,
             validate_responses=True, base_path='/',)
