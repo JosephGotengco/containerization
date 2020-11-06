@@ -182,7 +182,8 @@ def init_scheduler():
 def get_stats():
     """ Returns interesting facts stats """
     logger.info("Retrieving stats")
-
+    # create datetime iso format zero hour offset
+    current_datetime = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
     # if filename doesn't exist
     if not path.exists(filename):
         return "Statistics do not exist", 404
@@ -198,6 +199,7 @@ def get_stats():
     stats_obj["most_popular_tag"] = currentstats["most_popular_tag"]
     stats_obj["avg_jokes_added_weekly"] = currentstats["avg_jokes_added_weekly"]
     stats_obj["num_subscribed_users"] = currentstats["num_subscribed_users"]
+    stats_obj["datetime"] = current_datetime
 
     logger.debug(stats_obj)
     logger.info("Returning stats")
