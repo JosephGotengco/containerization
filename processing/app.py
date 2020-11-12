@@ -18,8 +18,8 @@ from flask_cors import CORS, cross_origin
 
 if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
     print("In Test Environment")
-    app_conf_file = "/config/processing/app_conf.yml"
-    log_conf_file = "/config/processing/log_conf.yml"
+    app_conf_file = "/config/app_conf.yaml"
+    log_conf_file = "/config/log_conf.yaml"
 else:
     print("In Dev Environment")
     app_conf_file = "app_conf.yml"
