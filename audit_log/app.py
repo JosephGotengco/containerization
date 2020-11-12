@@ -11,17 +11,28 @@ import datetime
 from pykafka import KafkaClient
 from flask_cors import CORS, cross_origin
 
+if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
+    print("In Test Environment")
+    app_conf_file = "/config/app_conf.yml"
+    log_conf_file = "/config/log_conf.yml"
+else:
+    print("In Dev Environment")
+    app_conf_file = "app_conf.yml"
+    log_conf_file = "log_conf.yml"
+
 # load config
-with open('app_conf.yaml', 'r') as f:
+with open(app_conf_file, 'r') as f:
     app_config = yaml.safe_load(f.read())
 
-
 # configure logging
-with open('log_conf.yaml', 'r') as f:
+with open(log_conf_file, 'r') as f:
     log_config = yaml.safe_load(f.read())
     logging.config.dictConfig(log_config)
 
 logger = logging.getLogger('basicLogger')
+
+logger.info("App Conf File: {}".format(app_conf_file))
+logger.info("Log Conf File: {}".format(log_conf_file))
 
 
 def get_fact(index):

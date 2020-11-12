@@ -10,21 +10,34 @@ import logging.config
 import mysql.connector
 import pymysql
 from os import path
+import os
 import requests
 import operator
 import json
 from flask_cors import CORS, cross_origin
 
+if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
+    print("In Test Environment")
+    app_conf_file = "/config/app_conf.yml"
+    log_conf_file = "/config/log_conf.yml"
+else:
+    print("In Dev Environment")
+    app_conf_file = "app_conf.yml"
+    log_conf_file = "log_conf.yml"
+
 # load config
-with open('app_conf.yaml', 'r') as f:
+with open(app_conf_file, 'r') as f:
     app_config = yaml.safe_load(f.read())
 
 # configure logging
-with open('log_conf.yaml', 'r') as f:
+with open(log_conf_file, 'r') as f:
     log_config = yaml.safe_load(f.read())
     logging.config.dictConfig(log_config)
 
 logger = logging.getLogger('basicLogger')
+
+logger.info("App Conf File: {}".format(app_conf_file))
+logger.info("Log Conf File: {}".format(log_conf_file))
 
 filename = app_config["datastore"]['filename']
 
@@ -144,28 +157,28 @@ def populate_stats():
         if user["subscribed"]:
             new_num_subscribed_users = new_num_subscribed_users + 1
 
-    with open(filename, "w") as f:
-        f.write(json.dumps({
-                "num_users": new_num_users,
-                "num_facts": new_num_facts,
-                "most_popular_tag": new_most_popular_tag,
-                "avg_jokes_added_weekly": new_avg_jokes_added_weekly,
-                "num_subscribed_users": new_num_subscribed_users,
-                "last_datetime": current_datetime
-                }, indent=4))
-        f.close()
-
-    # CODE SNIPPET FOR ADDING
     # with open(filename, "w") as f:
     #     f.write(json.dumps({
-    #             "num_users": curr_num_users + new_num_users,
-    #             "num_facts": curr_num_facts + new_num_facts,
+    #             "num_users": new_num_users,
+    #             "num_facts": new_num_facts,
     #             "most_popular_tag": new_most_popular_tag,
-    #             "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
-    #             "num_subscribed_users": curr_num_subscribed_users + new_num_subscribed_users,
+    #             "avg_jokes_added_weekly": new_avg_jokes_added_weekly,
+    #             "num_subscribed_users": new_num_subscribed_users,
     #             "last_datetime": current_datetime
     #             }, indent=4))
     #     f.close()
+
+    # CODE SNIPPET FOR ADDING
+    with open(filename, "w") as f:
+        f.write(json.dumps({
+                "num_users": curr_num_users + new_num_users,
+                "num_facts": curr_num_facts + new_num_facts,
+                "most_popular_tag": new_most_popular_tag,
+                "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
+                "num_subscribed_users": curr_num_subscribed_users + new_num_subscribed_users,
+                "last_datetime": current_datetime
+                }, indent=4))
+        f.close()
 
     # log processing end
     logger.info("Finished Periodic Processing")
