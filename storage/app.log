@@ -178,7 +178,7 @@
 2020-10-22 22:01:23,002 - basicLogger - DEBUG - Stored event ADD USER request with a unique id of a290f1ee-7c54-4b01-90e6-d701748f0851
 2020-10-22 22:01:23,031 - basicLogger - INFO - Message: {'type': 'ADD USER', 'datetime': '2020-10-22T22:01:13', 'payload': {'timestamp': '2020-09-09T09:12:33Z', 'user_id': 'a290f1ee-7c54-4b01-90e6-d701748f0851', 'username': 'axywqfcmqj', 'subscribed': True}}
 2020-10-22 22:01:23,114 - basicLogger - DEBUG - Stored event ADD USER request with a unique id of a290f1ee-7c54-4b01-90e6-d701748f0851
-2020-10-22 22:01:23,134 - basicLogger - INFO - Message: {'type': 'ADD USER', 'datetime': '2020-10-22T22:01:13', 'payload': {'timestamp': '2020-09-09T09:12:33Z', 'user_id': 'a290f1ee-7c54-4b01-90e6-d701748f0851', 'username': 'aoucymljeu', 'subscribed': True}}
+2020-10-22 22:01:23,134 - basicLogger - INFO - Message: {'type': 'ADD USER', 'datetime': '2020-10-22T22:01:13', 'payload': {'timestamp': '2020-09-09T09:12:33Z', 'user_id': 'a290f1ee-7c54-4b01-90e6-d701748f0851', 'username': 'aoucyamljeu', 'subscribed': True}}
 2020-10-22 22:01:23,203 - basicLogger - DEBUG - Stored event ADD USER request with a unique id of a290f1ee-7c54-4b01-90e6-d701748f0851
 2020-10-22 22:01:23,221 - basicLogger - INFO - Message: {'type': 'ADD USER', 'datetime': '2020-10-22T22:01:13', 'payload': {'timestamp': '2020-09-09T09:12:33Z', 'user_id': 'a290f1ee-7c54-4b01-90e6-d701748f0851', 'username': 'sprpqxjiql', 'subscribed': True}}
 2020-10-22 22:01:23,300 - basicLogger - DEBUG - Stored event ADD USER request with a unique id of a290f1ee-7c54-4b01-90e6-d701748f0851

@@ -23,8 +23,8 @@ if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
     log_conf_file = "/config/log_conf.yaml"
 else:
     print("In Dev Environment")
-    app_conf_file = "app_conf.yml"
-    log_conf_file = "log_conf.yml"
+    app_conf_file = "app_conf.yaml"
+    log_conf_file = "log_conf.yaml"
 
 # load config
 with open(app_conf_file, 'r') as f:
