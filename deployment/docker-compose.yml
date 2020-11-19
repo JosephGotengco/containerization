@@ -113,3 +113,5 @@ services:
 volumes:
     my-db:
     processing-db:
+networks:  
+    api.network:
