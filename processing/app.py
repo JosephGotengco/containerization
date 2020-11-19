@@ -109,6 +109,7 @@ def populate_stats():
     if subscriber_status_code != 200:
         logger.error("request to {} with timestamp of {} returned {}".format(
             get_subscribers_url, timestamp, subscriber_status_code))
+        new_num_users = 0
     else:
         user_events = get_subscriber_res.json()
         logger.info("request to {} with timestamp of {} returned {} events".format(
@@ -119,69 +120,70 @@ def populate_stats():
         # calculate num_users
         new_num_users = len(user_events)
 
-        # calculate num_facts
-        new_num_facts = len(fact_events)
+    # calculate num_facts
+    new_num_facts = len(fact_events)
 
-        # calculate most_popular_tag
-        tags = {}
-        new_most_popular_tag = curr_most_popular_tag
-        for fact in fact_events:
-            for tag in fact["tags"]:
-                if tag not in tags:
-                    tags[tag] = 1
-                else:
-                    tags[tag] = tags[tag] + 1
-        if len(tags):
-            new_most_popular_tag = max(tags.items(), key=operator.itemgetter(1))[0]
-
-        # calculate avg_jokes_added_weekly
-        iso_facts_added = {}
-        new_avg_jokes_added_weekly = 0
-        for fact in fact_events:
-            iso_datetime = datetime.datetime.strptime(
-                fact["date_added"], '%Y-%m-%d %H:%M:%S.%f').isocalendar()
-            # make key and convert to string
-            key = "-".join(map(str, iso_datetime))
-            if key not in iso_facts_added:
-                iso_facts_added[key] = 1
+    # calculate most_popular_tag
+    tags = {}
+    new_most_popular_tag = curr_most_popular_tag
+    for fact in fact_events:
+        for tag in fact["tags"]:
+            if tag not in tags:
+                tags[tag] = 1
             else:
-                iso_facts_added[key] = iso_facts_added[key] + 1
-        # take average
-        if (len(iso_facts_added)):
-            new_avg_jokes_added_weekly = sum(
-                iso_facts_added.values()) / len(iso_facts_added)
+                tags[tag] = tags[tag] + 1
+    if len(tags):
+        new_most_popular_tag = max(tags.items(), key=operator.itemgetter(1))[0]
 
-        # calculate new_num_subscribed_users
-        new_num_subscribed_users = 0
+    # calculate avg_jokes_added_weekly
+    iso_facts_added = {}
+    new_avg_jokes_added_weekly = 0
+    for fact in fact_events:
+        iso_datetime = datetime.datetime.strptime(
+            fact["date_added"], '%Y-%m-%d %H:%M:%S.%f').isocalendar()
+        # make key and convert to string
+        key = "-".join(map(str, iso_datetime))
+        if key not in iso_facts_added:
+            iso_facts_added[key] = 1
+        else:
+            iso_facts_added[key] = iso_facts_added[key] + 1
+    # take average
+    if (len(iso_facts_added)):
+        new_avg_jokes_added_weekly = sum(
+            iso_facts_added.values()) / len(iso_facts_added)
+
+    # calculate new_num_subscribed_users
+    new_num_subscribed_users = 0
+    if user_events:
         for user in user_events:
             if user["subscribed"]:
                 new_num_subscribed_users = new_num_subscribed_users + 1
 
-        # with open(filename, "w") as f:
-        #     f.write(json.dumps({
-        #             "num_users": new_num_users,
-        #             "num_facts": new_num_facts,
-        #             "most_popular_tag": new_most_popular_tag,
-        #             "avg_jokes_added_weekly": new_avg_jokes_added_weekly,
-        #             "num_subscribed_users": new_num_subscribed_users,
-        #             "last_datetime": current_datetime
-        #             }, indent=4))
-        #     f.close()
+    # with open(filename, "w") as f:
+    #     f.write(json.dumps({
+    #             "num_users": new_num_users,
+    #             "num_facts": new_num_facts,
+    #             "most_popular_tag": new_most_popular_tag,
+    #             "avg_jokes_added_weekly": new_avg_jokes_added_weekly,
+    #             "num_subscribed_users": new_num_subscribed_users,
+    #             "last_datetime": current_datetime
+    #             }, indent=4))
+    #     f.close()
 
-        # CODE SNIPPET FOR ADDING
-        with open(filename, "w") as f:
-            f.write(json.dumps({
-                    "num_users": curr_num_users + new_num_users,
-                    "num_facts": curr_num_facts + new_num_facts,
-                    "most_popular_tag": new_most_popular_tag,
-                    "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
-                    "num_subscribed_users": curr_num_subscribed_users + new_num_subscribed_users,
-                    "last_datetime": current_datetime
-                    }, indent=4))
-            f.close()
+    # CODE SNIPPET FOR ADDING
+    with open(filename, "w") as f:
+        f.write(json.dumps({
+                "num_users": curr_num_users + new_num_users,
+                "num_facts": curr_num_facts + new_num_facts,
+                "most_popular_tag": new_most_popular_tag,
+                "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
+                "num_subscribed_users": curr_num_subscribed_users + new_num_subscribed_users,
+                "last_datetime": current_datetime
+                }, indent=4))
+        f.close()
 
-        # log processing end
-        logger.info("Finished Periodic Processing")
+    # log processing end
+    logger.info("Finished Periodic Processing")
 
 
 def init_scheduler():
