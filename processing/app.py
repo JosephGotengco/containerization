@@ -109,7 +109,7 @@ def populate_stats():
     if subscriber_status_code != 200:
         logger.error("request to {} with timestamp of {} returned {}".format(
             get_subscribers_url, timestamp, subscriber_status_code))
-        new_num_users = 0
+        new_num_users = []
     else:
         user_events = get_subscriber_res.json()
         logger.info("request to {} with timestamp of {} returned {} events".format(
