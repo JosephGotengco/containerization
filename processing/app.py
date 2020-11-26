@@ -75,7 +75,7 @@ def populate_stats():
     curr_num_users = currentstats["num_users"]
     curr_num_facts = currentstats["num_facts"]
     curr_most_popular_tag = currentstats["most_popular_tag"]
-    curr_avg_jokes_added_weekly = currentstats["avg_jokes_added_weekly"]
+    # curr_avg_jokes_added_weekly = currentstats["avg_jokes_added_weekly"]
     curr_num_subscribed_users = currentstats["num_subscribed_users"]
     last_datetime = currentstats["last_datetime"]
 
@@ -135,22 +135,22 @@ def populate_stats():
     if len(tags):
         new_most_popular_tag = max(tags.items(), key=operator.itemgetter(1))[0]
 
-    # calculate avg_jokes_added_weekly
-    iso_facts_added = {}
-    new_avg_jokes_added_weekly = 0
-    for fact in fact_events:
-        iso_datetime = datetime.datetime.strptime(
-            fact["date_added"], '%Y-%m-%d %H:%M:%S.%f').isocalendar()
-        # make key and convert to string
-        key = "-".join(map(str, iso_datetime))
-        if key not in iso_facts_added:
-            iso_facts_added[key] = 1
-        else:
-            iso_facts_added[key] = iso_facts_added[key] + 1
-    # take average
-    if (len(iso_facts_added)):
-        new_avg_jokes_added_weekly = sum(
-            iso_facts_added.values()) / len(iso_facts_added)
+    # # calculate avg_jokes_added_weekly
+    # iso_facts_added = {}
+    # new_avg_jokes_added_weekly = 0
+    # for fact in fact_events:
+    #     iso_datetime = datetime.datetime.strptime(
+    #         fact["date_added"], '%Y-%m-%d %H:%M:%S.%f').isocalendar()
+    #     # make key and convert to string
+    #     key = "-".join(map(str, iso_datetime))
+    #     if key not in iso_facts_added:
+    #         iso_facts_added[key] = 1
+    #     else:
+    #         iso_facts_added[key] = iso_facts_added[key] + 1
+    # # take average
+    # if (len(iso_facts_added)):
+    #     new_avg_jokes_added_weekly = sum(
+    #         iso_facts_added.values()) / len(iso_facts_added)
 
     # calculate new_num_subscribed_users
     new_num_subscribed_users = 0
@@ -176,7 +176,7 @@ def populate_stats():
                 "num_users": curr_num_users + new_num_users,
                 "num_facts": curr_num_facts + new_num_facts,
                 "most_popular_tag": new_most_popular_tag,
-                "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
+                # "avg_jokes_added_weekly": curr_avg_jokes_added_weekly + new_avg_jokes_added_weekly,
                 "num_subscribed_users": curr_num_subscribed_users + new_num_subscribed_users,
                 "last_datetime": current_datetime
                 }, indent=4))
