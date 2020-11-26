@@ -212,7 +212,7 @@ def get_stats():
     stats_obj["num_users"] = currentstats["num_users"]
     stats_obj["num_facts"] = currentstats["num_facts"]
     stats_obj["most_popular_tag"] = currentstats["most_popular_tag"]
-    stats_obj["avg_jokes_added_weekly"] = currentstats["avg_jokes_added_weekly"]
+    # stats_obj["avg_jokes_added_weekly"] = currentstats["avg_jokes_added_weekly"]
     stats_obj["num_subscribed_users"] = currentstats["num_subscribed_users"]
     stats_obj["datetime"] = current_datetime
 
