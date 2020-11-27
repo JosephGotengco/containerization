@@ -10116,3 +10116,9 @@
 2020-10-28 15:07:31,165 - basicLogger - DEBUG - Stored event ADD FACT request with a unique id of d290f1ee-6c54-4b01-90e6-d701748f0851
 2020-10-28 15:09:19,665 - basicLogger - INFO - Connecting to DB. Hostname:kafka-service-based.westus2.cloudapp.azure.com, Port:3306
 2020-10-28 15:09:19,702 - basicLogger - INFO - Connecting to DB. Hostname:kafka-service-based.westus2.cloudapp.azure.com, Port:3306
+2020-11-26 19:06:41,041 - basicLogger - INFO - App Conf File: app_conf.yaml
+2020-11-26 19:06:41,042 - basicLogger - INFO - Log Conf File: log_conf.yaml
+2020-11-26 19:06:41,058 - basicLogger - INFO - Connecting to DB. Hostname:kafka-service-based.westus2.cloudapp.azure.com, Port:3306
+2020-11-26 19:06:41,177 - basicLogger - INFO - App Conf File: app_conf.yaml
+2020-11-26 19:06:41,249 - basicLogger - INFO - Log Conf File: log_conf.yaml
+2020-11-26 19:06:41,253 - basicLogger - INFO - Connecting to DB. Hostname:kafka-service-based.westus2.cloudapp.azure.com, Port:3306
