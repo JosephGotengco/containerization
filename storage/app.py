@@ -41,7 +41,7 @@ logger.info("App Conf File: {}".format(app_conf_file))
 logger.info("Log Conf File: {}".format(log_conf_file))
 
 datastore = app_config["datastore"]
-
+zookeeper = "zookeeper:2181"
 
 DB_ENGINE = create_engine(
     "mysql+pymysql://{}:{}@{}:{}/{}".format(datastore["user"], datastore["password"], datastore["hostname"], datastore["port"], datastore["db"]))
@@ -113,10 +113,12 @@ def process_messages():
     topic = client.topics[app_config["events"]["topic"]]
 
     # consume messages on start, don't consume previous ones
-    consumer = topic.get_simple_consumer(
+    consumer = topic.get_balanced_consumer(
         consumer_group="event_group",
+        zookeeper_connect=zookeeper,
         reset_offset_on_start=False,
-        auto_offset_reset=OffsetType.LATEST)
+        auto_commit_enable=True,
+        auto_commit_interval=100)
 
     # this is block - it will wait for new messages
     for msg in consumer:
