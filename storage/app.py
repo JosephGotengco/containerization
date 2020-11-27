@@ -112,7 +112,7 @@ def process_messages():
     client = KafkaClient(hosts=hostname)
     topic = client.topics[app_config["events"]["topic"]]
 
-    zookeeper = "kafka-service-based.westus2.cloudapp.azure.com:2181"
+    zookeeper = "kafka-service-based.westus2.cloudapp.azure.com:2181/kafka"
     # consume messages on start, don't consume previous ones
     consumer = topic.get_balanced_consumer(
         consumer_group="event_group",
