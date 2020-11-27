@@ -112,14 +112,13 @@ def process_messages():
     client = KafkaClient(hosts=hostname)
     topic = client.topics[app_config["events"]["topic"]]
 
-    zookeeper = "kafka-service-based.westus2.cloudapp.azure.com:9092/kafka"
     # consume messages on start, don't consume previous ones
     consumer = topic.get_balanced_consumer(
         consumer_group="event_group",
-        zookeeper_connect=zookeeper,
+        zookeeper_connect="kafka-service-based.westus2.cloudapp.azure.com: 9092",
         reset_offset_on_start=False,
         auto_commit_enable=True,
-        auto_commit_interval=100)
+        auto_commit_interval_ms=100)
 
     # this is block - it will wait for new messages
     for msg in consumer:
