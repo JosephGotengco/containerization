@@ -41,7 +41,7 @@ logger.info("App Conf File: {}".format(app_conf_file))
 logger.info("Log Conf File: {}".format(log_conf_file))
 
 datastore = app_config["datastore"]
-zookeeper = "kafka-service-based.westus2.cloudapp.azure.com:9092"
+
 
 DB_ENGINE = create_engine(
     "mysql+pymysql://{}:{}@{}:{}/{}".format(datastore["user"], datastore["password"], datastore["hostname"], datastore["port"], datastore["db"]))
@@ -112,6 +112,7 @@ def process_messages():
     client = KafkaClient(hosts=hostname)
     topic = client.topics[app_config["events"]["topic"]]
 
+    zookeeper = "kafka-service-based.westus2.cloudapp.azure.com:2181"
     # consume messages on start, don't consume previous ones
     consumer = topic.get_balanced_consumer(
         consumer_group="event_group",
