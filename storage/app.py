@@ -41,7 +41,7 @@ logger.info("App Conf File: {}".format(app_conf_file))
 logger.info("Log Conf File: {}".format(log_conf_file))
 
 datastore = app_config["datastore"]
-zookeeper = "zookeeper:2181"
+zookeeper = "kafka-service-based.westus2.cloudapp.azure.com:9092"
 
 DB_ENGINE = create_engine(
     "mysql+pymysql://{}:{}@{}:{}/{}".format(datastore["user"], datastore["password"], datastore["hostname"], datastore["port"], datastore["db"]))
