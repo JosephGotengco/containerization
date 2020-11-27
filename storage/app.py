@@ -115,7 +115,7 @@ def process_messages():
     # consume messages on start, don't consume previous ones
     consumer = topic.get_balanced_consumer(
         consumer_group="event_group",
-        zookeeper_connect="kafka-service-based.westus2.cloudapp.azure.com: 9092",
+        zookeeper_connect="kafka-service-based.westus2.cloudapp.azure.com:9092",
         reset_offset_on_start=False,
         auto_commit_enable=True,
         auto_commit_interval_ms=100)
