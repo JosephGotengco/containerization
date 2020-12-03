@@ -123,7 +123,7 @@ def process_messages():
     #     reset_offset_on_start=False,
     #     auto_commit_enable=True,
     #     auto_commit_interval_ms=100)
-
+    # test
     # this is block - it will wait for new messages
     for msg in consumer:
         msg_str = msg.value.decode("utf-8")
