@@ -41,9 +41,11 @@ logger = logging.getLogger('basicLogger')
 logger.info("App Conf File: {}".format(app_conf_file))
 logger.info("Log Conf File: {}".format(log_conf_file))
 
-client = KafkaClient(hosts='{}:{}'.format(kafka_server, kafka_port))
-topic = client.topics[kafka_topic]
-producer = topic.get_sync_producer()
+producer = None
+while producer is None:
+    client = KafkaClient(hosts='{}:{}'.format(kafka_server, kafka_port))
+    topic = client.topics[kafka_topic]
+    producer = topic.get_sync_producer()
 
 def add_fact(body):
     """ Passes add fact request data to database service """
