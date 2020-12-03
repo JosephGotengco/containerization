@@ -4,9 +4,6 @@ services:
         image: wurstmeister/zookeeper
         ports:
             - "2181:2181"
-        expose:
-            # Opens port 2181 on the container
-            - "2181"
         hostname: zookeeper
     kafka:
         image: wurstmeister/kafka
