@@ -41,14 +41,17 @@ logger = logging.getLogger('basicLogger')
 logger.info("App Conf File: {}".format(app_conf_file))
 logger.info("Log Conf File: {}".format(log_conf_file))
 
+client = KafkaClient(hosts='{}:{}'.format(kafka_server, kafka_port))
+topic = client.topics[kafka_topic]
+producer = topic.get_sync_producer()
 
 def add_fact(body):
     """ Passes add fact request data to database service """
 
     # LAB 7 CODE
-    client = KafkaClient(hosts='{}:{}'.format(kafka_server, kafka_port))
-    topic = client.topics[kafka_topic]
-    producer = topic.get_sync_producer()
+    # client = KafkaClient(hosts='{}:{}'.format(kafka_server, kafka_port))
+    # topic = client.topics[kafka_topic]
+    # producer = topic.get_sync_producer()
 
     msg = {
         "type": "ADD FACT",
@@ -66,9 +69,9 @@ def subscribe_user(body):
     """ Passes subscibe user request data to database service """
 
     # LAB 7 CODE
-    client = KafkaClient(hosts='{}:{}'.format(kafka_server, kafka_port))
-    topic = client.topics[kafka_topic]
-    producer = topic.get_sync_producer()
+    # client = KafkaClient(hosts='{}:{}'.format(kafka_server, kafka_port))
+    # topic = client.topics[kafka_topic]
+    # producer = topic.get_sync_producer()
 
     msg = {
         "type": "ADD USER",
